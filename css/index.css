@@ -10,9 +10,86 @@ li {
     margin-bottom: 10px
 }
 
-a {
-    font-size: 40px !important;
-    margin: 0 5px 20px 0
+.header {
+    padding: 10px 20px;
+    background: #4d7493;
+    margin: 20px;
+    border-radius: 20px;
+    cursor: default;
+    box-shadow: rgba(50, 50, 93, 0.25) 0 6px 12px -2px, rgba(0, 0, 0, 0.3) 0 3px 7px -3px;
+}
+
+@media (max-width: 579px) {
+    .image {
+        margin: auto;
+    }
+}
+
+.title {
+    text-transform: capitalize;
+	display: block;
+	font-size: xx-large;
+    font-family: 'Roboto Slab', serif;
+    text-align: center;
+    font-weight: bolder;
+    user-select: none;
+    color: white;
+	position: relative;
+	transition: all 0.4s ease-out;
+}
+
+.title.separate i .fa-chevron-down {
+	right: 12px;
+	left: auto;
+	transition: trasform 0.2s ease-in-out;
+}
+
+.separate {
+    border-bottom: 2px black dashed !important;
+}
+
+
+.resume {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.presentation {
+    display: flex;
+    flex: 1;
+    min-width: 300px;
+}
+
+.submenuItems {
+    display: none;
+}
+
+.accordion-menu li.active .submenuItems {
+	display: block;
+}
+
+.submenuItems li {
+	display: block;
+	transition: all 0.2 ease-out;
+}
+
+.image {
+    margin-left: 10px;
+    border-radius: 10px;
+    margin-right: -10px;
+}
+
+.accordion-menu li:last-child .title.separate{
+	border-bottom: 0;
+}
+
+.accordion-menu li.active .title.separate {
+	color: #fff;
+}
+
+.accordion-menu li.active .title.separate .fa-chevron-down {
+	transform: rotate(180deg);
 }
 
 .text {
@@ -23,34 +100,6 @@ a {
     margin: auto;
     font-weight: normal;
     text-align: justify;
-}
-
-.presentation {
-    display: flex;
-    flex: 1;
-    min-width: 300px;
-}
-
-.image {
-    margin-left: 10px;
-    border-radius: 10px;
-    margin-right: -10px;
-}
-
-@media (max-width: 579px) {
-    .image {
-        margin: auto;
-    }
-}
-
-.content {
-    display: none;
-}
-
-.resume {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
 }
 
 .bold {
@@ -64,27 +113,34 @@ a {
     border-radius: 20px;
     cursor: pointer;
     box-shadow: rgba(50, 50, 93, 0.25) 0 6px 12px -2px, rgba(0, 0, 0, 0.3) 0 3px 7px -3px;
-    
 }
 
-.title {
-    text-transform: capitalize;
-    font-size: xx-large;
-    font-family: 'Roboto Slab', serif;
-    text-align: center;
-    font-weight: bolder;
-    user-select: none;
-    color: white
+.box:hover {
+    background: #406586;
+	transition: all 0.2;
 }
-
-.separate {
-    border-bottom: 2px black dashed;
-}
-
-
 
 .center {
     width: 100%;
     text-align: center;
     cursor: pointer;
+}
+
+.text-link {
+    font-size: 20px;
+    color: white;
+}
+
+.text-link:hover {
+	color: black;
+}
+
+a {
+	color: #406586;
+    font-size: 40px ;
+    margin: 0 5px 20px 0
+}
+
+a:hover {
+	color: white;
 }
